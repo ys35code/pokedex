@@ -1,25 +1,23 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
-
+import Logo from "./Logo";
+import BestPokemon from "./BestPokemon";
+import CaughtPokemon from "./CaughtPokemon";
+import data from "./data/data.json";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div>
+    <Logo appName="Pokedex" myData={data}  />
+    <BestPokemon />
+    <CaughtPokemon />
+   </div>
+
   );
 }
+
+
+
+
 
 export default App;
